@@ -40,9 +40,12 @@
       <plugin id="org.apache.felix.gogo.command" autoStart="true" startLevel="0" />
       <plugin id="org.apache.felix.gogo.runtime" autoStart="true" startLevel="0" />
       <plugin id="org.apache.felix.gogo.shell" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.mina.core" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.sshd.core" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.cm" autoStart="true" startLevel="3" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.console" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.console.ssh" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.frameworkadmin.equinox" autoStart="true" startLevel="3" />
@@ -74,6 +77,9 @@
       <plugin id="org.openhab.model.sitemap" autoStart="true" startLevel="4" />
       <plugin id="org.openhab.ui" autoStart="true" startLevel="0" />
       <plugin id="org.openhab.ui.webapp" autoStart="true" startLevel="0" />
+      <property name="org.eclipse.equinox.console.jaas.file" value="etc/ssh_users.cfg" />
+      <property name="osgi.console.ssh.useDefaultSecureStorage" value="true" />
+      <property name="ssh.server.keystore" value="etc/hostkey.ser" />
    </configurations>
 
 </product>
